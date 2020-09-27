@@ -572,6 +572,9 @@
               name="user-name"
               id="user-name"
               class="form-field"
+              pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+              autocomplete="off"
+              required
             />
             <svg class="form-icon" width="18" height="18">
               <use href="./svg/incomoon/symbol-defs.svg#person-black"></use>
@@ -585,6 +588,9 @@
               name="user-phone"
               id="user-phone"
               class="form-field"
+              pattern="[0-9]{10,12}"
+              autocomplete="off"
+              required
             />
             <svg class="form-icon" width="18" height="18">
               <use href="./svg/incomoon/symbol-defs.svg#phone-black"></use>
@@ -609,17 +615,20 @@
               name="user-message"
               id="user-message"
               placeholder="Введите текст"
-              rows="5"
+              rows="7"
               class="form-field"
             ></textarea>
           </label>
-          <div class="checkbox-label">
-            <label for="checkbox" class="checkbox-label">
-              <input type="checkbox" class="checkbox" id="checkbox" />
-              <span>Соглашаюсь с рассылкой и принимаю</span>
-              <a href="">Условия договора</a>
-            </label>
-          </div>
+
+          <label for="checkbox" class="checkbox-label">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <span class="checkbox-icon"></span>
+            <span
+              >Соглашаюсь с рассылкой и принимаю
+              <a href=""> Условия договора</a></span
+            >
+          </label>
+
           <button class="btn">Отправить</button>
         </form>
       </div>
